@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>论文详情</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+    <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts-wordcloud.min.js"></script>
+    <style type="text/css">
+        /* Custom Styles */
+        ul.nav-tabs {
+            width: 200px;
+            margin-top: 20px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+        }
+
+        ul.nav-tabs li {
+            margin: 0;
+            border-top: 1px solid #ddd;
+        }
+
+        ul.nav-tabs li:first-child {
+            border-top: none;
+        }
+
+        ul.nav-tabs li a {
+            margin: 0;
+            padding: 8px 16px;
+            border-radius: 0;
+        }
+
+        ul.nav-tabs li.active a,
+        ul.nav-tabs li.active a:hover {
+            color: #fff;
+            background: #0088cc;
+            border: 1px solid #0088cc;
+        }
+
+        ul.nav-tabs li:first-child a {
+            border-radius: 4px 4px 0 0;
+        }
+
+        ul.nav-tabs li:last-child a {
+            border-radius: 0 0 4px 4px;
+        }
+
+        ul.nav-tabs.affix {
+            top: 30px;
+            /* Set the top position of pinned element */
+        }
+
+        .jumbotron {
+            background: #d9edf7;
+        }
+       
+
+
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#myScrollspy">
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center">
+                论文集合{{check}}
+                
+            </h1>
+            <span class="label label-success" >详情</span>
+        </div>
+        <div class="row">
+            <div class="col-xs-3" id="myScrollspy">
+                <ul class="nav nav-tabs nav-stacked" id="myNav">
+                    <li><a href="{% url 'choose_paper:index' %}"><strong>返回</strong></a></li>
+                    <li><a href="#论文集合"><strong>论文集合</strong></a></li>
+                    <li><a href="#词云"><strong>词云</strong></a></li>                     
+                </ul>
+            </div>
+
+            <div class="col-xs-9">
+                <div class="panel panel-info" id="论文集合">
+                    <div class="panel-heading">
+                        <h2>论文集合</h2>
+                    </div>
+                    <div class="panel-body" height="200px">
+                        <p style="font-size:20px ;font-weight:bold"> 
+                            <ul>
+                            {% for node in nodes %}
+                                <li>{{node}}</li>
+                                {% endfor %}
+                            </ul>
+                            </p>
+                    </div>
+                </div>
+
+                <div class="panel panel-info" id="词云">
+                    <div class="panel-heading">
+                        <h2>词云</h2>
+                    </div>
+                    <div class="panel-body" height="200px">
+                        <p style="font-size:20px ;font-weight:bold"> 
+                            <div id="mywordcloud_txt" style="width:900px; height:500px;">
+
+                            </div>
+                            </p>
+                    </div>
+                </div>
+
+                
+               
+
+
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#myNav").affix({
+                    offset: {
+                        top: 125
+                    }
+                });
+            });
+        //词云
+        var mywordcloud_txt= {{ mywordcloud_txt | safe }};
+            var chart_1 = echarts.init(
+                document.getElementById('mywordcloud_txt'), 'white', { renderer: 'canvas' });
+            var option_1 = mywordcloud_txt
+            chart_1.setOption(option_1);
+        
+        
+        </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>基于规则嵌入的论文比对系统</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="http://www.bootcss.com/p/bootstrap-datetimepicker/bootstrap-datetimepicker/css/datetimepicker.css" rel="stylesheet">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="http://www.bootcss.com/p/bootstrap-datetimepicker/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="http://www.bootcss.com/p/bootstrap-datetimepicker/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+
+    <style>
+        .jumbotron {
+            background: #d0e1f0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="jumbotron text-center" style="height: 220px;">
+            <h1>基于规则嵌入的论文比对系统</h1><br>
+            <!-- <span class="label label-success" style="font-size: large;">输入一篇科普文章，您将得到它的“主题”与“行文思路”</span> -->
+        </div>
+
+        <div class="row">
+
+            <div class="col-xs-3">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3>论文列表</h3>
+                        <span class="label label-default">集合</span>
+                    </div>
+                    <div class="panel-body">
+                        <!-- 这里回头是选择好论文集合后论文题目的展示部分 -->
+                        <div style="overflow-y:scroll; height: 360px;">
+                            {% if paper_list %}
+                            <ul class="nav nav-pills nav-stacked">
+                                {% for paper in paper_list %}
+                                <li><a href="{% url 'choose_paper:paper_detail'   paper.articals%}">{{ paper.nodes  }}</a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                            {% else %}
+                            <p>没有历史记录</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="col-xs-9">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="text-center">论文集合输入</h3>
+                    </div>
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                        通过年份会议选择论文集合
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <form class="form-horizontal" role="form"   method="POST" action="{% url 'choose_paper:setPaper' %}">
+                                {% csrf_token %}
+                                        <div class="form-group">
+                                            <div class="col-sm-2 col-lg-offset-1">
+                                                <p>年份</p>
+                                                <input type="text" id="date" name="datetimepicker" value=" "
+                                                    placeholder="选择年份" class="form-control">
+                                            </div>
+                                        
+                                            <div class="col-sm-2 col-lg-offset-1">
+                                                <p>会议</p>
+                                                <div class="form-group">
+                                                    <input type="text" name="venue" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-1 col-lg-offset-1">
+                                            </div>
+
+                                            <div class="switch switch-large">
+                                                <p>规则</p>
+                                                <div class="col-sm-1 col-lg-offset-1">
+                                                </div>
+                                                <input type="checkbox" name="check" checked />
+                                            </div>
+
+                                        </div>
+                                            <div class="col-sm-offset-2 col-sm-3">
+                                                <button type="button submit" class="btn btn-info btn-lg btn-block" name="paper_set">
+                                                    详情</button>
+                                            </div>
+                                            
+
+                                            <div class="col-sm-offset-2 col-sm-3">
+                                                <button type="button submit" class="btn btn-success btn-lg btn-block" name="analyse">
+                                                    分析</button>
+                                                </div>
+                                            </form>
+                                       
+                                        
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                    输入论文名选择对应论文集合
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <form class="form-horizontal" role="form" action="{% url 'choose_paper:choose_detail' %}"
+                                method="POST">
+                                {% csrf_token %}
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">论文名</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" placeholder="请输入论文名" name="node">
+                                        </div>
+
+                                        <div class="col-sm-1 col-lg-offset-1">
+                                        </div>
+
+                                        <div class="switch switch-large">
+                                            <p>规则</p>
+                                            <div class="col-sm-1 col-lg-offset-1">
+                                            </div>
+                                            <input type="checkbox" name="check" checked />
+                                        </div>
+                                    </div>
+
+                                   
+                                        <div class="col-sm-offset-2 col-sm-3">
+                                            <button type="button submit" class="btn btn-info btn-lg btn-block" name="xiangQing">
+                                                详情</button>
+                                        </div>
+                                        <div class="col-sm-offset-2 col-sm-3">
+                                            <button type="button submit" class="btn btn-success btn-lg btn-block" name="fenXi">
+                                                分析</button>
+                                            </div>
+                                        </form>
+                                </div>
+                                        
+                                   
+                              
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                        数据集中不同年份的论文数量
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse in"></div>
+                                <div class="panel-body">
+                                    <div id="graph_year_num" style="width:900px; height:500px;"></div>
+                                   
+                                
+                                    </div>
+                        </div>       
+                                
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                        不同年份论文的平均被引用量与引用量
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseFour" class="panel-collapse collapse in"></div>
+                                <div class="panel-body">
+                                    <div id="graph_avg_txt" style="width:900px; height:500px;"></div>
+                                   
+                                    </div>
+                        </div>  
+                        
+                        
+                        
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                        不同年份平均被引用量统计
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse in"></div>
+                                <div class="panel-body">
+                                    <div id="line_txt" style="width:900px; height:500px;"></div>
+                                   
+                                
+                                    </div>
+                        </div>     
+                        
+                        
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                        不同会议/期刊的论文平均被引用量（排名前60）
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse in"></div>
+                                <div class="panel-body">
+                                    <div id="venue_pie_txt" style="width:900px; height:500px;"></div>
+                                   
+                                
+                                    </div>
+                        </div>   
+                               
+                        
+
+                                
+                            </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+   
+    <script type="text/javascript">
+        $('#date').datetimepicker({
+            startView: 4,//日期时间选择器打开之后首先显示的视图。 可接受的值：0 - 小时 视图，1 - 天 视图，2 - 月 视图，3 - 年 视图，4 - 十年 视图
+            minView: 4,//Number, String. 默认值：0, ‘hour’，日期时间选择器所能够提供的最精确的时间选择视图
+            autoclose: true,//当选择一个日期之后是否立即关闭此日期时间选择器
+            todayBtn: true,//在日期时间选择器组件的底部显示一个 “Today” 按钮用以选择当前日期
+            format: 'yyyy',//日期显示格式
+            yearOffset: 0,
+
+        });
+
+        //第一张柱形图
+        var graph_year_num= {{ graph_year_num_txt | safe }};
+            var chart_1 = echarts.init(
+                document.getElementById('graph_year_num'), 'roma', { renderer: 'canvas' });
+            var option_1 = graph_year_num
+            chart_1.setOption(option_1);
+        //第二张柱形图
+        var graph_avg_txt= {{ graph_avg_txt | safe }};
+            var chart_1 = echarts.init(
+                document.getElementById('graph_avg_txt'), 'roma', { renderer: 'canvas' });
+            var option_1 = graph_avg_txt
+            chart_1.setOption(option_1);
+        //第三张柱形图
+        var line_txt= {{ line_txt | safe }};
+            var chart_1 = echarts.init(
+                document.getElementById('line_txt'), 'roma', { renderer: 'canvas' });
+            var option_1 = line_txt
+            chart_1.setOption(option_1);
+        //第四张柱形图
+        var venue_pie_txt= {{venue_pie_txt | safe }};
+            var chart_1 = echarts.init(
+                document.getElementById('venue_pie_txt'), 'roma', { renderer: 'canvas' });
+            var option_1 = venue_pie_txt
+            chart_1.setOption(option_1);
+        
+    </script>
+</body>
+
+
+
+
+</html>

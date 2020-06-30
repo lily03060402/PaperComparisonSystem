@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+
+</head>
+<body>
+    <div id="115a372236a54d3a9fe7df59d1e5f585" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_115a372236a54d3a9fe7df59d1e5f585 = echarts.init(
+            document.getElementById('115a372236a54d3a9fe7df59d1e5f585'), 'white', {renderer: 'canvas'});
+        var option_115a372236a54d3a9fe7df59d1e5f585 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "blue",
+        "green",
+        "yellow",
+        "red",
+        "pink",
+        "orange",
+        "purple",
+        "grey"
+    ],
+    "series": [
+        {
+            "type": "pie",
+            "name": "\u4f1a\u8bae/\u671f\u520a",
+            "clockwise": true,
+            "data": [
+                {
+                    "name": "Journal of Climate",
+                    "value": 66144.5
+                },
+                {
+                    "name": "Tiwanaamrit",
+                    "value": 61858.0
+                },
+                {
+                    "name": "Journal of Neuroscience Methods",
+                    "value": 30740.0
+                },
+                {
+                    "name": "IEEE Transactions on Circuits and Systems for Video Technology",
+                    "value": 30147.5
+                },
+                {
+                    "name": "Inorganic Chemistry",
+                    "value": 25053.0
+                },
+                {
+                    "name": "The Journal of Logic and Algebraic Programming",
+                    "value": 25053.0
+                },
+                {
+                    "name": "ieee workshop on motion and video computing",
+                    "value": 25053.0
+                },
+                {
+                    "name": "Advanced Energy Materials",
+                    "value": 23974.5
+                },
+                {
+                    "name": "international conference on advanced language processing and web informat",
+                    "value": 20237.0
+                },
+                {
+                    "name": "international conference on graph transformation",
+                    "value": 17641.0
+                },
+                {
+                    "name": "parallel rendering symposium",
+                    "value": 17458.0
+                },
+                {
+                    "name": "Bauermick",
+                    "value": 17153.0
+                },
+                {
+                    "name": "workshop on generic programming",
+                    "value": 16967.33
+                },
+                {
+                    "name": "Imagelab - a platform for image manipulation assignments",
+                    "value": 16197.0
+                },
+                {
+                    "name": "business information systems",
+                    "value": 15865.5
+                },
+                {
+                    "name": "Magnetic Resonance Materials in Physics Biology and Medicine",
+                    "value": 14879.0
+                },
+                {
+                    "name": "Advanced Materials Research",
+                    "value": 14771.0
+                },
+                {
+                    "name": "theoretical issues in natural language processing",
+                    "value": 13777.33
+                },
+                {
+                    "name": "Environmental Geochemistry and Health",
+                    "value": 13593.0
+                },
+                {
+                    "name": "Proceedings of the 2nd ACM workshop on Continuous archival and retrieval of personal experiences",
+                    "value": 13593.0
+                },
+                {
+                    "name": "international conference on development and learning",
+                    "value": 13028.0
+                },
+                {
+                    "name": "Communications in Statistics-theory and Methods",
+                    "value": 13028.0
+                },
+                {
+                    "name": "international symposium on distributed objects and applications",
+                    "value": 12783.0
+                },
+                {
+                    "name": "Hereditas",
+                    "value": 12625.0
+                },
+                {
+                    "name": "JAMA Neurology",
+                    "value": 12059.0
+                },
+                {
+                    "name": "The Journal of Continuing Higher Education",
+                    "value": 12043.0
+                },
+                {
+                    "name": "Computing",
+                    "value": 11348.5
+                },
+                {
+                    "name": "international ifip tc networking conference",
+                    "value": 11077.0
+                },
+                {
+                    "name": "Obesity",
+                    "value": 10949.0
+                },
+                {
+                    "name": "international conference on information technology and applications",
+                    "value": 10599.0
+                },
+                {
+                    "name": "Sikha Bagui",
+                    "value": 10559.0
+                },
+                {
+                    "name": "participatory design conference",
+                    "value": 9901.09
+                },
+                {
+                    "name": "euromicro conference on real-time systems",
+                    "value": 9720.17
+                },
+                {
+                    "name": "Journal of Information Science",
+                    "value": 9634.5
+                },
+                {
+                    "name": "ACM Sigapl Apl Quote Quad",
+                    "value": 9481.33
+                },
+                {
+                    "name": "nordic workshop programming theory",
+                    "value": 8879.5
+                },
+                {
+                    "name": "international conference on theory and practice of electronic governance",
+                    "value": 8707.0
+                },
+                {
+                    "name": "Fisheries Oceanography",
+                    "value": 8607.0
+                },
+                {
+                    "name": "ACM Transactions on Architecture and Code Optimization",
+                    "value": 8592.14
+                },
+                {
+                    "name": "integrated network management",
+                    "value": 8306.75
+                },
+                {
+                    "name": "Computers and Electronics in Agriculture",
+                    "value": 8020.0
+                },
+                {
+                    "name": "european design automation conference",
+                    "value": 8001.5
+                },
+                {
+                    "name": "IEEE Journal on Selected Areas in Communications",
+                    "value": 7367.28
+                },
+                {
+                    "name": "Journal of Computers",
+                    "value": 6739.5
+                },
+                {
+                    "name": "principles and practice of programming in java",
+                    "value": 6713.21
+                },
+                {
+                    "name": "ACM Standardview",
+                    "value": 6676.5
+                },
+                {
+                    "name": "Andrew P Black",
+                    "value": 6574.5
+                },
+                {
+                    "name": "Cognition, Technology & Work",
+                    "value": 6514.5
+                },
+                {
+                    "name": "siam conference on parallel processing for scientific computing",
+                    "value": 6487.0
+                },
+                {
+                    "name": "arXiv: Formal Languages and Automata Theory",
+                    "value": 6487.0
+                },
+                {
+                    "name": "Social Science Computer Review",
+                    "value": 6382.0
+                },
+                {
+                    "name": "ieee international conference on services computing",
+                    "value": 6320.62
+                },
+                {
+                    "name": "architectures for networking and communications systems",
+                    "value": 6097.5
+                },
+                {
+                    "name": "Journal of Simulation",
+                    "value": 5832.0
+                },
+                {
+                    "name": "Playing the numbers: M.D. Coverley's Fibonacci's Daughter",
+                    "value": 5767.0
+                },
+                {
+                    "name": "Physics Letters B",
+                    "value": 5710.4
+                },
+                {
+                    "name": "Discourse: Studies in The Cultural Politics of Education",
+                    "value": 5677.0
+                },
+                {
+                    "name": "logic in computer science",
+                    "value": 5599.58
+                },
+                {
+                    "name": "IEEE Transactions on Circuits and Systems Ii: Analog and Digital Signal Proc",
+                    "value": 5446.0
+                },
+                {
+                    "name": "software engineering and formal methods",
+                    "value": 5405.75
+                }
+            ],
+            "radius": [
+                40,
+                120
+            ],
+            "center": [
+                "50%",
+                "50%"
+            ],
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{a} <br/>{b}: {c} ({d}%)",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "Journal of Climate",
+                "Tiwanaamrit",
+                "Journal of Neuroscience Methods",
+                "IEEE Transactions on Circuits and Systems for Video Technology",
+                "Inorganic Chemistry",
+                "The Journal of Logic and Algebraic Programming",
+                "ieee workshop on motion and video computing",
+                "Advanced Energy Materials",
+                "international conference on advanced language processing and web informat",
+                "international conference on graph transformation",
+                "parallel rendering symposium",
+                "Bauermick",
+                "workshop on generic programming",
+                "Imagelab - a platform for image manipulation assignments",
+                "business information systems",
+                "Magnetic Resonance Materials in Physics Biology and Medicine",
+                "Advanced Materials Research",
+                "theoretical issues in natural language processing",
+                "Environmental Geochemistry and Health",
+                "Proceedings of the 2nd ACM workshop on Continuous archival and retrieval of personal experiences",
+                "international conference on development and learning",
+                "Communications in Statistics-theory and Methods",
+                "international symposium on distributed objects and applications",
+                "Hereditas",
+                "JAMA Neurology",
+                "The Journal of Continuing Higher Education",
+                "Computing",
+                "international ifip tc networking conference",
+                "Obesity",
+                "international conference on information technology and applications",
+                "Sikha Bagui",
+                "participatory design conference",
+                "euromicro conference on real-time systems",
+                "Journal of Information Science",
+                "ACM Sigapl Apl Quote Quad",
+                "nordic workshop programming theory",
+                "international conference on theory and practice of electronic governance",
+                "Fisheries Oceanography",
+                "ACM Transactions on Architecture and Code Optimization",
+                "integrated network management",
+                "Computers and Electronics in Agriculture",
+                "european design automation conference",
+                "IEEE Journal on Selected Areas in Communications",
+                "Journal of Computers",
+                "principles and practice of programming in java",
+                "ACM Standardview",
+                "Andrew P Black",
+                "Cognition, Technology & Work",
+                "siam conference on parallel processing for scientific computing",
+                "arXiv: Formal Languages and Automata Theory",
+                "Social Science Computer Review",
+                "ieee international conference on services computing",
+                "architectures for networking and communications systems",
+                "Journal of Simulation",
+                "Playing the numbers: M.D. Coverley's Fibonacci's Daughter",
+                "Physics Letters B",
+                "Discourse: Studies in The Cultural Politics of Education",
+                "logic in computer science",
+                "IEEE Transactions on Circuits and Systems Ii: Analog and Digital Signal Proc",
+                "software engineering and formal methods"
+            ],
+            "selected": {},
+            "show": false,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "title": [
+        {
+            "text": "\u4e0d\u540c\u4f1a\u8bae/\u671f\u520a\u7684\u8bba\u6587\u5e73\u5747\u88ab\u5f15\u7528\u91cf\uff08\u6392\u540d\u524d60\uff09",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_115a372236a54d3a9fe7df59d1e5f585.setOption(option_115a372236a54d3a9fe7df59d1e5f585);
+    </script>
+</body>
+</html>

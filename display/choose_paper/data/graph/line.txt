@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+
+</head>
+<body>
+    <div id="1c1681701e4e4c85b95b2704436896ba" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_1c1681701e4e4c85b95b2704436896ba = echarts.init(
+            document.getElementById('1c1681701e4e4c85b95b2704436896ba'), 'white', {renderer: 'canvas'});
+        var option_1c1681701e4e4c85b95b2704436896ba = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "line",
+            "name": "\u5e73\u5747\u88ab\u5f15\u7528\u91cf",
+            "connectNulls": false,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": false,
+            "clip": true,
+            "step": false,
+            "data": [
+                [
+                    "1903",
+                    10
+                ],
+                [
+                    "1937",
+                    1219
+                ],
+                [
+                    "1948",
+                    26
+                ],
+                [
+                    "1953",
+                    124
+                ],
+                [
+                    "1955",
+                    6
+                ],
+                [
+                    "1957",
+                    249
+                ],
+                [
+                    "1958",
+                    112
+                ],
+                [
+                    "1959",
+                    211
+                ],
+                [
+                    "1960",
+                    116
+                ],
+                [
+                    "1961",
+                    285
+                ],
+                [
+                    "1962",
+                    648
+                ],
+                [
+                    "1963",
+                    242
+                ],
+                [
+                    "1964",
+                    699
+                ],
+                [
+                    "1965",
+                    519
+                ],
+                [
+                    "1966",
+                    2052
+                ],
+                [
+                    "1967",
+                    173
+                ],
+                [
+                    "1968",
+                    86
+                ],
+                [
+                    "1969",
+                    249
+                ],
+                [
+                    "1970",
+                    107
+                ],
+                [
+                    "1971",
+                    289
+                ],
+                [
+                    "1972",
+                    677
+                ],
+                [
+                    "1973",
+                    371
+                ],
+                [
+                    "1974",
+                    275
+                ],
+                [
+                    "1975",
+                    1065
+                ],
+                [
+                    "1976",
+                    791
+                ],
+                [
+                    "1977",
+                    523
+                ],
+                [
+                    "1978",
+                    2892
+                ],
+                [
+                    "1979",
+                    623
+                ],
+                [
+                    "1980",
+                    3730
+                ],
+                [
+                    "1981",
+                    317
+                ],
+                [
+                    "1982",
+                    446
+                ],
+                [
+                    "1983",
+                    605
+                ],
+                [
+                    "1984",
+                    1143
+                ],
+                [
+                    "1985",
+                    610
+                ],
+                [
+                    "1986",
+                    1210
+                ],
+                [
+                    "1987",
+                    770
+                ],
+                [
+                    "1988",
+                    939
+                ],
+                [
+                    "1989",
+                    700
+                ],
+                [
+                    "1990",
+                    819
+                ],
+                [
+                    "1991",
+                    759
+                ],
+                [
+                    "1992",
+                    647
+                ],
+                [
+                    "1993",
+                    774
+                ],
+                [
+                    "1994",
+                    1014
+                ],
+                [
+                    "1995",
+                    1186
+                ],
+                [
+                    "1996",
+                    687
+                ],
+                [
+                    "1997",
+                    796
+                ],
+                [
+                    "1998",
+                    623
+                ],
+                [
+                    "1999",
+                    741
+                ],
+                [
+                    "2000",
+                    879
+                ],
+                [
+                    "2001",
+                    797
+                ],
+                [
+                    "2002",
+                    733
+                ],
+                [
+                    "2003",
+                    775
+                ],
+                [
+                    "2004",
+                    801
+                ],
+                [
+                    "2005",
+                    848
+                ],
+                [
+                    "2006",
+                    654
+                ],
+                [
+                    "2007",
+                    770
+                ],
+                [
+                    "2008",
+                    576
+                ],
+                [
+                    "2009",
+                    552
+                ],
+                [
+                    "2010",
+                    587
+                ],
+                [
+                    "2011",
+                    533
+                ],
+                [
+                    "2012",
+                    1164
+                ],
+                [
+                    "2013",
+                    446
+                ],
+                [
+                    "2014",
+                    467
+                ],
+                [
+                    "2015",
+                    597
+                ],
+                [
+                    "2016",
+                    859
+                ],
+                [
+                    "2017",
+                    199
+                ],
+                [
+                    "2018",
+                    670
+                ],
+                [
+                    "2019",
+                    94
+                ],
+                [
+                    "2020",
+                    208
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0
+            },
+            "markPoint": {
+                "label": {
+                    "show": true,
+                    "position": "inside",
+                    "color": "#fff",
+                    "margin": 8
+                },
+                "data": [
+                    {
+                        "name": "\u6700\u5927\u503c",
+                        "type": "max"
+                    },
+                    {
+                        "name": "\u6700\u5c0f\u503c",
+                        "type": "min"
+                    }
+                ]
+            },
+            "markLine": {
+                "silent": false,
+                "precision": 2,
+                "label": {
+                    "show": true,
+                    "position": "top",
+                    "margin": 8
+                },
+                "data": [
+                    {
+                        "name": "\u5e73\u5747\u503c",
+                        "type": "average"
+                    }
+                ]
+            },
+            "zlevel": 0,
+            "z": 0
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u5e73\u5747\u88ab\u5f15\u7528\u91cf"
+            ],
+            "selected": {
+                "\u5e73\u5747\u88ab\u5f15\u7528\u91cf": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "xAxis": [
+        {
+            "type": "category",
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "boundaryGap": false,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "1903",
+                "1937",
+                "1948",
+                "1953",
+                "1955",
+                "1957",
+                "1958",
+                "1959",
+                "1960",
+                "1961",
+                "1962",
+                "1963",
+                "1964",
+                "1965",
+                "1966",
+                "1967",
+                "1968",
+                "1969",
+                "1970",
+                "1971",
+                "1972",
+                "1973",
+                "1974",
+                "1975",
+                "1976",
+                "1977",
+                "1978",
+                "1979",
+                "1980",
+                "1981",
+                "1982",
+                "1983",
+                "1984",
+                "1985",
+                "1986",
+                "1987",
+                "1988",
+                "1989",
+                "1990",
+                "1991",
+                "1992",
+                "1993",
+                "1994",
+                "1995",
+                "1996",
+                "1997",
+                "1998",
+                "1999",
+                "2000",
+                "2001",
+                "2002",
+                "2003",
+                "2004",
+                "2005",
+                "2006",
+                "2007",
+                "2008",
+                "2009",
+                "2010",
+                "2011",
+                "2012",
+                "2013",
+                "2014",
+                "2015",
+                "2016",
+                "2017",
+                "2018",
+                "2019",
+                "2020"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "text": "\u4e0d\u540c\u5e74\u4efd\u5e73\u5747\u88ab\u5f15\u7528\u91cf\u7edf\u8ba1",
+            "subtext": "\u7edf\u8ba1\u622a\u6b62\u52302020.6.26",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ],
+    "dataZoom": {
+        "show": true,
+        "type": "slider",
+        "realtime": true,
+        "start": 20,
+        "end": 80,
+        "orient": "horizontal",
+        "zoomLock": false,
+        "filterMode": "filter"
+    }
+};
+        chart_1c1681701e4e4c85b95b2704436896ba.setOption(option_1c1681701e4e4c85b95b2704436896ba);
+    </script>
+</body>
+</html>

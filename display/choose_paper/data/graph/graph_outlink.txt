@@ -1,0 +1,173 @@
+    <div id="29e39514639946e3822646c9c4b1a6a9" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_29e39514639946e3822646c9c4b1a6a9 = echarts.init(
+            document.getElementById('29e39514639946e3822646c9c4b1a6a9'), 'roma', {renderer: 'canvas'});
+        var option_29e39514639946e3822646c9c4b1a6a9 = {
+    "series": [
+        {
+            "type": "graph",
+            "layout": "force",
+            "circular": {
+                "rotateLabel": false
+            },
+            "force": {
+                "repulsion": 1500,
+                "edgeLength": 50,
+                "gravity": 0.2
+            },
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8,
+                "fontSize": 12
+            },
+            "lineStyle": {
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "roam": true,
+            "focusNodeAdjacency": true,
+            "data": [
+                {
+                    "name": "authoritative sources in a hyperlinked environment ",
+                    "symbolSize": 20,
+                    "category": 0
+                },
+                {
+                    "name": "the connectivity server     ",
+                    "symbolSize": 20,
+                    "category": 1
+                },
+                {
+                    "name": "    improved algorithms for topic distillation in a hyperlinked environment     ",
+                    "symbolSize": 20,
+                    "category": 1
+                },
+                {
+                    "name": "    structural analysis of hypertexts     ",
+                    "symbolSize": 20,
+                    "category": 1
+                },
+                {
+                    "name": "    the anatomy of a large-scale hypertextual web search engine     ",
+                    "symbolSize": 20,
+                    "category": 1
+                },
+                {
+                    "name": "    scatter",
+                    "symbolSize": 20,
+                    "category": 1
+                },
+                {
+                    "name": "gather: a cluster-based approach to browsing large document collections     ",
+                    "symbolSize": 20,
+                    "category": 1
+                },
+                {
+                    "name": "    automatic text processing     ",
+                    "symbolSize": 20,
+                    "category": 1
+                },
+                {
+                    "name": "    information retrieval, 2nd edition     ",
+                    "symbolSize": 20,
+                    "category": 1
+                },
+                {
+                    "name": "    \n",
+                    "symbolSize": 20,
+                    "category": 1
+                }
+            ],
+            "categories": [
+                {
+                    "name": "\u672c\u8bba\u6587"
+                },
+                {
+                    "name": "\u5f15\u7528\u8bba\u6587"
+                }
+            ],
+            "edgeSymbol": [
+                "circle",
+                "arrow"
+            ],
+            "edgeSymbolSize": 10,
+            "links": [
+                {
+                    "source": "authoritative sources in a hyperlinked environment ",
+                    "target": "authoritative sources in a hyperlinked environment "
+                },
+                {
+                    "source": "authoritative sources in a hyperlinked environment ",
+                    "target": "the connectivity server     "
+                },
+                {
+                    "source": "authoritative sources in a hyperlinked environment ",
+                    "target": "    improved algorithms for topic distillation in a hyperlinked environment     "
+                },
+                {
+                    "source": "authoritative sources in a hyperlinked environment ",
+                    "target": "    structural analysis of hypertexts     "
+                },
+                {
+                    "source": "authoritative sources in a hyperlinked environment ",
+                    "target": "    the anatomy of a large-scale hypertextual web search engine     "
+                },
+                {
+                    "source": "authoritative sources in a hyperlinked environment ",
+                    "target": "    scatter"
+                },
+                {
+                    "source": "authoritative sources in a hyperlinked environment ",
+                    "target": "gather: a cluster-based approach to browsing large document collections     "
+                },
+                {
+                    "source": "authoritative sources in a hyperlinked environment ",
+                    "target": "    automatic text processing     "
+                },
+                {
+                    "source": "authoritative sources in a hyperlinked environment ",
+                    "target": "    information retrieval, 2nd edition     "
+                },
+                {
+                    "source": "authoritative sources in a hyperlinked environment ",
+                    "target": "    \n"
+                }
+            ]
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u672c\u8bba\u6587",
+                "\u5f15\u7528\u8bba\u6587"
+            ],
+            "selected": {
+                "\u672c\u8bba\u6587": true,
+                "\u5f15\u7528\u8bba\u6587": true
+            },
+            "show": true
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "title": [
+        {
+            "text": "\u8bba\u6587\u5f15\u7528\u5173\u7cfb\u56fe"
+        }
+    ]
+};
+        chart_29e39514639946e3822646c9c4b1a6a9.setOption(option_29e39514639946e3822646c9c4b1a6a9);
+    </script>

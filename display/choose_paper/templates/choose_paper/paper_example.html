@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>论文详情</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+    <style type="text/css">
+        /* Custom Styles */
+        ul.nav-tabs {
+            width: 200px;
+            margin-top: 20px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+        }
+
+        ul.nav-tabs li {
+            margin: 0;
+            border-top: 1px solid #ddd;
+        }
+
+        ul.nav-tabs li:first-child {
+            border-top: none;
+        }
+
+        ul.nav-tabs li a {
+            margin: 0;
+            padding: 8px 16px;
+            border-radius: 0;
+        }
+
+        ul.nav-tabs li.active a,
+        ul.nav-tabs li.active a:hover {
+            color: #fff;
+            background: #0088cc;
+            border: 1px solid #0088cc;
+        }
+
+        ul.nav-tabs li:first-child a {
+            border-radius: 4px 4px 0 0;
+        }
+
+        ul.nav-tabs li:last-child a {
+            border-radius: 0 0 4px 4px;
+        }
+
+        ul.nav-tabs.affix {
+            top: 30px;
+            /* Set the top position of pinned element */
+        }
+
+        .jumbotron {
+            background: #d9edf7;
+        }
+       
+
+
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#myScrollspy">
+    <div class="container">
+        <div class="jumbotron" class="text-center">
+            <h1>
+                论文：{{ nodes }}
+                
+            </h1>
+            <span class="label label-success" >详情</span>
+        </div>
+        <div class="row">
+            <div class="col-xs-3" id="myScrollspy">
+                <ul class="nav nav-tabs nav-stacked" id="myNav">
+                    <li><a href="{% url 'choose_paper:index' %}"><strong>返回</strong></a></li>
+                    <li><a href="#id"><strong>id</strong></a></li>
+                    <li><a href="#作者"><strong>作者</strong></a></li>
+                    <li><a href="#摘要"><strong>摘要</strong></a></li>
+                    <li><a href="#作者单位"><strong>作者单位</strong></a></li>
+                    <li><a href="#标签 "><strong>标签 </strong></a></li>
+                    <li><a href="#关键字"><strong>关键字</strong></a></li>
+                    <li><a href="#引用inlinks "><strong>引用inlinks </strong></a></li>
+                    <li><a href="#引用outlinks"><strong>引用outlinks </strong></a></li>
+                    <li><a href="#GeneralTerms"><strong>GeneralTerms</strong></a></li>
+                </ul>
+            </div>
+            <div class="col-xs-9">
+                <div class="panel panel-info" id="id">
+                    <div class="panel-heading">
+                        <h2>id</h2>
+                    </div>
+                    <div class="panel-body" height="200px">
+                        <p style="font-size:20px ;font-weight:bold"> {{articals}}</p>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="panel panel-info" id="作者">
+                    <div class="panel-heading">
+                        <h2>作者 </h2>
+                    </div>
+                    <div class="panel-body">
+                        <p style="font-size:20px ;font-weight:bold">{{authors }}</p>
+                    </div>
+                </div>
+               
+                <hr>
+                <div class="panel panel-info" id="摘要">
+                    <div class="panel-heading">
+                        <h2>摘要 </h2>
+                    </div>
+                    <div class="panel-body">
+                        <p style="font-size:20px ;font-weight:bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{abstracts}}</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="panel panel-info" id="作者单位 ">
+                    <div class="panel-heading">
+                        <h2>作者单位 </h2>
+                    </div>
+                    <div class="panel-body">
+                        <p style="font-size:20px ;font-weight:bold">{{affiliations}}</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="panel panel-info" id="标签 ">
+                    <div class="panel-heading">
+                        <h2>标签 </h2>
+                    </div>
+                    <div class="panel-body">
+                        <p style="font-size:20px ;font-weight:bold">
+                            {{IndexTerms}}</p>
+                    </div>
+                </div>
+
+                <div class="panel panel-info" id="关键字">
+                    <div class="panel-heading">
+                        <h2>关键字 </h2>
+                    </div>
+                    <div class="panel-body">
+                        <p style="font-size:20px ;font-weight:bold">{{  keywords}}</p>
+                    </div>
+                </div>
+
+                <div class="panel panel-info" id="引用inlinks ">
+                    <div class="panel-heading">
+                        <h2>引用inlinks </h2>
+                    </div>
+                    <div class="panel-body">
+                        <p style="font-size:20px ;font-weight:bold">{{inlinks}}</p>
+                    </div>
+                </div>
+
+                <div class="panel panel-info" id="引用outlinks ">
+                    <div class="panel-heading">
+                        <h2>引用outlinks </h2>
+                    </div>
+                    <div class="panel-body">
+                        <p style="font-size:20px ;font-weight:bold">{{outlinks}}</p>
+                    </div>
+                </div>
+
+                <div class="panel panel-info" id="GeneralTerms">
+                    <div class="panel-heading">
+                        <h2>GeneralTerms </h2>
+                    </div>
+                    <div class="panel-body">
+                        <p style="font-size:20px ;font-weight:bold">{{GeneralTerms}}</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#myNav").affix({
+                    offset: {
+                        top: 125
+                    }
+                });
+            });
+          
+    
+        </script>
+
+
+</body>
+
+</html>

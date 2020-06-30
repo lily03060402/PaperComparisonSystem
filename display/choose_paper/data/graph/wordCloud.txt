@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+        <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts-wordcloud.min.js"></script>
+
+</head>
+<body>
+    <div id="aee7c6606f744cde8130933468dc3fbe" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_aee7c6606f744cde8130933468dc3fbe = echarts.init(
+            document.getElementById('aee7c6606f744cde8130933468dc3fbe'), 'white', {renderer: 'canvas'});
+        var option_aee7c6606f744cde8130933468dc3fbe = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "wordCloud",
+            "shape": "triangle",
+            "rotationRange": [
+                0,
+                0
+            ],
+            "rotationStep": 45,
+            "girdSize": 20,
+            "sizeRange": [
+                12,
+                60
+            ],
+            "data": [
+                {
+                    "name": "wireless",
+                    "value": 2,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(86,147,84)"
+                        }
+                    }
+                },
+                {
+                    "name": "communication",
+                    "value": 3,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(145,20,1)"
+                        }
+                    }
+                },
+                {
+                    "name": "faceted",
+                    "value": 2,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(8,80,108)"
+                        }
+                    }
+                },
+                {
+                    "name": "web",
+                    "value": 2,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(59,54,20)"
+                        }
+                    }
+                },
+                {
+                    "name": "model",
+                    "value": 3,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(141,35,34)"
+                        }
+                    }
+                },
+                {
+                    "name": "computing",
+                    "value": 3,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(84,28,8)"
+                        }
+                    }
+                },
+                {
+                    "name": "machine",
+                    "value": 2,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(74,93,136)"
+                        }
+                    }
+                },
+                {
+                    "name": "shape",
+                    "value": 2,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(1,31,73)"
+                        }
+                    }
+                },
+                {
+                    "name": "derivative",
+                    "value": 2,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(123,59,112)"
+                        }
+                    }
+                },
+                {
+                    "name": "awareness",
+                    "value": 2,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(142,51,10)"
+                        }
+                    }
+                },
+                {
+                    "name": "informal",
+                    "value": 2,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(142,103,42)"
+                        }
+                    }
+                },
+                {
+                    "name": "test",
+                    "value": 2,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(54,106,142)"
+                        }
+                    }
+                },
+                {
+                    "name": "generation",
+                    "value": 2,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(31,12,137)"
+                        }
+                    }
+                },
+                {
+                    "name": "analysis",
+                    "value": 2,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(154,159,112)"
+                        }
+                    }
+                },
+                {
+                    "name": "routing",
+                    "value": 2,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(91,138,1)"
+                        }
+                    }
+                },
+                {
+                    "name": "fixation",
+                    "value": 2,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(110,118,117)"
+                        }
+                    }
+                },
+                {
+                    "name": "summarization",
+                    "value": 2,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(138,84,143)"
+                        }
+                    }
+                },
+                {
+                    "name": "testing",
+                    "value": 2,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(65,150,1)"
+                        }
+                    }
+                },
+                {
+                    "name": "multimedia",
+                    "value": 2,
+                    "textStyle": {
+                        "normal": {
+                            "color": "rgb(70,154,160)"
+                        }
+                    }
+                }
+            ],
+            "drawOutOfBound": false,
+            "textStyle": {
+                "emphasis": {}
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "title": [
+        {
+            "text": "2000 human factors in computing systems:\u5173\u952e\u8bcd\u8bcd\u4e91\u5c55\u793a",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_aee7c6606f744cde8130933468dc3fbe.setOption(option_aee7c6606f744cde8130933468dc3fbe);
+    </script>
+</body>
+</html>

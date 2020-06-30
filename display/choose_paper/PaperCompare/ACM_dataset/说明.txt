@@ -1,0 +1,9 @@
+abstracts	论文摘要
+affiliations	作者的单位
+articals	论文ID
+authors	论文作者
+IndexTerms	论文的标签
+inlinks	引用关系，前面引用后面的
+keywords	论文关键词
+nodes	论文题目
+outlinks	引用关系，前面引用后面的

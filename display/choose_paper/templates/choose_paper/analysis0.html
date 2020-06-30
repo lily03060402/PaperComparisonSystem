@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>论文相似度</title>
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+  <style type="text/css">
+    /* Custom Styles */
+
+    .jumbotron {
+      background: #d9edf7;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="text-center">
+        论文相似度
+      </h1>
+    </div>
+
+    <nav role="navigation" class="navbar navbar-static-top navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand">相似度分析</a>
+        </div>
+
+        <ul class="nav navbar-nav">
+          <li><button type = "button" style="width: 90px;height: 50px;border: 1px;" onclick="loadXMLDoc0()">研究背景</button></li>
+          <li><button style="width: 90px;height: 50px;border: 1px;"  onclick="loadXMLDoc1()">研究问题</button></li>
+          <li><button style="width: 90px;height: 50px;border: 1px;" onclick="loadXMLDoc2()">贡献</button></li>
+          <li><button style="width: 90px;height: 50px;border: 1px;" onclick="loadXMLDoc3()">方法</button></li>
+          <li><button style="width: 90px;height: 50px;border: 1px;" onclick="loadXMLDoc4()">实验</button></li>
+        </ul>
+
+      </div>
+    </nav>
+
+  </div>
+  <div class="col-xs-2" ></div>
+  <div class="col-xs-9">
+      <div class="panel panel-info" >
+          
+          <div class="panel-body" id="contents" >
+              <p  style="font-size:15px ;font-weight:bold ;color: blueviolet;text-decoration:underline;" id="contents"> 
+                        相似度分析
+                        
+                  </p>
+          </div>
+      </div>
+
+  </div>
+
+  <script type="text/javascript">
+
+    let res0 = {{ back |safe }};
+    let res1 = {{ issue | safe }};
+    let res2 = {{ contribute | safe }};
+    let res3 = {{ measure | safe }};
+    let res4 = {{ exam | safe }};
+    let other0 = {{ other0 |safe }};
+    let other1 = {{ other1 | safe }};
+    let other2 = {{ other2 | safe }};
+    let other3 = {{ other3 | safe }};
+    let other4 = {{ other4 | safe }};
+
+
+    
+    function loadXMLDoc0() {
+      var node=document.getElementById("contents");
+      document.getElementById("contents").innerHTML = ""
+          for(var i=0;i<res0.length;i++) { 
+            //相似论文对
+              var p=document.createElement("p");
+              p.setAttribute("style","font-size:20px; font-weight:bold;text-decoration:underline");
+              var tmp=document.createTextNode(res0[i]);
+              p.appendChild(tmp);
+              node.appendChild(p) ;
+            //具体信息
+             
+              var p=document.createElement("p");
+              p.setAttribute("style","font-size:8px; color:blueviolet; ");
+              var tmp=document.createTextNode(other0[i]);
+              p.appendChild(tmp);
+              node.appendChild(p) ;
+             
+             
+
+
+          }            
+    }
+
+    function loadXMLDoc1() {
+      var node=document.getElementById("contents");
+      document.getElementById("contents").innerHTML = ""
+          for(var i=0;i<res1.length;i++) { 
+              var p=document.createElement("p");
+              var tmp=document.createTextNode(res1[i]);
+              p.appendChild(tmp);
+              p.setAttribute("style","font-size:20px;  font-weight:bold;text-decoration:underline");
+              node.appendChild(p) ;
+              //具体信息
+             
+              var p=document.createElement("p");
+              p.setAttribute("style","font-size:8px; color:blueviolet; ");
+              var tmp=document.createTextNode(other1[i]);
+              log(other1[i][j])
+              p.appendChild(tmp);
+              node.appendChild(p) ;
+             
+          }            
+    }
+
+    function loadXMLDoc2() {
+      var node=document.getElementById("contents");
+      document.getElementById("contents").innerHTML = ""
+          for(var i=0;i<res2.length;i++) { 
+              var p=document.createElement("p");
+              var tmp=document.createTextNode(res2[i]);
+              p.appendChild(tmp);
+              p.setAttribute("style","font-size:20px;  font-weight:bold;text-decoration:underline");
+              node.appendChild(p) ;
+              //具体信息
+             
+              var p=document.createElement("p");
+              p.setAttribute("style","font-size:8px; color:blueviolet; ");
+              var tmp=document.createTextNode(other2[i]);
+              log(other2)
+              p.appendChild(tmp);
+              node.appendChild(p) ;
+             
+              
+          }     
+    }
+    function loadXMLDoc3() {
+      var node=document.getElementById("contents");
+      document.getElementById("contents").innerHTML = ""
+          for(var i=0;i<res3.length;i++) { 
+              var p=document.createElement("p");
+              var tmp=document.createTextNode(res3[i]);
+              p.appendChild(tmp);
+              p.setAttribute("style","font-size:20px;  font-weight:bold;text-decoration:underline");
+              node.appendChild(p) ;
+              //具体信息
+             
+              var p=document.createElement("p");
+              p.setAttribute("style","font-size:8px; color:blueviolet; ");
+              var tmp=document.createTextNode(other3[i]);
+              p.appendChild(tmp);
+              node.appendChild(p) ;
+             
+          }     
+    }
+    function loadXMLDoc4(){
+      var node=document.getElementById("contents");
+      document.getElementById("contents").innerHTML = ""
+          for(var i=0;i<res4.length;i++) { 
+              var p=document.createElement("p");
+              var tmp=document.createTextNode(res4[i]);
+              p.appendChild(tmp);
+              p.setAttribute("style","font-size:20px;  font-weight:bold;text-decoration:underline");
+              node.appendChild(p) ;
+              //具体信息
+              var p=document.createElement("p");
+              p.setAttribute("style","font-size:8px; color:blueviolet; ");
+              var tmp=document.createTextNode(other4[i]);
+              p.appendChild(tmp);
+              node.appendChild(p) ;
+             
+          }   
+    }
+
+
+  </script>
+
+
+</body>
+
+</html>
